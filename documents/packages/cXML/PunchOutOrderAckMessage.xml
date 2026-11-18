@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "cXML.dtd">
+<cXML version="1.0" payloadID="78900@ariba.cisco.com" timestamp="1999-03-12T18:39:09-08:00">
+    <Header>
+        <From>
+            <Credential domain="DUNS">
+                <Identity>012345678</Identity>
+            </Credential>
+        </From>
+        <To>
+            <Credential domain="AribaNetworkUserId">
+                <Identity>aribaadmin@cisco.com</Identity>
+            </Credential>
+        </To>
+        <Sender>
+            <Credential domain="DUNS">
+                <Identity>012345678</Identity>
+                <SharedSecret>foobar</SharedSecret>
+            </Credential>
+            <UserAgent></UserAgent>
+        </Sender>
+    </Header>
+    <Message inReplyTo="456778@premier.dell.com">
+        <PunchOutOrderAckMessage>
+            <BuyerCookie>34234234ADFSDF234234</BuyerCookie>
+            <PunchOutOrderMessageHeader operationAllowed="edit">
+                <Total>
+                    <Money currency="USD">100.23</Money>
+                </Total>
+            </PunchOutOrderMessageHeader>
+            <ItemIn quantity="1">
+                <ItemID>
+                    <SupplierPartID>1234</SupplierPartID>
+                    <SupplierPartAuxiliaryID>supplier cookie to describe configuration options on this item</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>
+                        <Money currency="USD">10.23</Money>
+                    </UnitPrice>
+                    <Description xml:lang="en">Learn ASP in a Week!</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification domain="SPSC">12345</Classification>
+                    <ManufacturerPartID>ISBN-23455634</ManufacturerPartID>             
+                    <ManufacturerName>O'Reilly</ManufacturerName>                
+                </ItemDetail>
+            </ItemIn>
+            <ItemIn quantity="2">
+                <ItemID>
+                    <SupplierPartID>4567</SupplierPartID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>
+                        <Money currency="USD">50</Money>
+                    </UnitPrice>
+                    <Description xml:lang="en">WordBasic Macros</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification domain="SPSC">12345</Classification>
+                    <ManufacturerPartID>ISBN-123456</ManufacturerPartID>              
+                    <ManufacturerName>Microsoft Press</ManufacturerName>               
+                </ItemDetail>
+            </ItemIn>
+        </PunchOutOrderAckMessage>
+    </Message>
+</cXML>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Contract SYSTEM "cXML.dtd">
+
+<Contract effectiveDate="1999-01-01" expirationDate="2000-06-01">
+  <SupplierID domain="DUNS">123456</SupplierID>
+  <Comments xml:lang="en-US">
+    Sample cXML contract
+  </Comments>
+  <ItemSegment segmentKey="Detroit">
+    <ContractItem>
+      <ItemID>
+	    <SupplierPartID>12345</SupplierPartID>
+      </ItemID>
+      <UnitPrice><Money currency="USD">1.50</Money></UnitPrice>
+	  <Extrinsic name="URL"> http://dell.com/CoolProducts </Extrinsic>
+    </ContractItem>
+    <ContractItem>
+      <ItemID>
+        <SupplierPartID>12347</SupplierPartID>
+      </ItemID>
+      <UnitPrice><Money currency="USD">111.50</Money></UnitPrice>
+    </ContractItem>
+  </ItemSegment>
+</Contract>

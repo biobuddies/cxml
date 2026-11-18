@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "cXML.dtd">
+<!-- 
+    Request for getting the list of catalog subscriptions for a buyer.
+ -->
+<cXML version="1.0" payloadID="456778@ariba.cisco.com" timestamp="1999-03-12T18:39:09-08:00">
+    <Header>
+        <From>
+            <Credential domain="AribaNetworkUserId">
+                <Identity>aribadmin@cisco.com</Identity>
+            </Credential>
+        </From>
+        <To>
+            <Credential domain="AribaNetworkUserId">
+                <Identity>admin@ariba.com</Identity>
+            </Credential>
+        </To>
+        <Sender>
+            <Credential domain="AribaNetworkUserId">
+                <Identity>aribadmin@cisco.com</Identity>
+                <SharedSecret>foobar</SharedSecret>
+            </Credential>
+            <UserAgent>ORMS</UserAgent>
+        </Sender>
+    </Header>
+    <Request>
+        <SubscriptionListRequest/>
+    </Request>
+</cXML>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "cXML.dtd">
+<cXML version="1.0" payloadID="1233444@ariba.cisco.com" timestamp="1999-03-12T18:39:09-08:00">
+    <Header>
+        <From>
+            <Credential domain="AribaNetworkUserId">
+                <Identity>aribaadmin@cisco.com</Identity>
+            </Credential>
+        </From>
+        <To>
+            <Credential domain="DUNS">
+                <Identity>012345678</Identity>
+            </Credential>
+        </To>
+        <Sender>
+            <Credential domain="AribaNetworkUserId">
+                <Identity>aribaadmin@cisco.com</Identity>
+                <SharedSecret>welcome</SharedSecret>
+            </Credential>
+            <UserAgent>Ariba ORMS 5.1P4 </UserAgent>
+        </Sender>
+    </Header>
+    <Request>
+        <PunchOutSetupRequest operation="create">
+            <BuyerCookie>34234234ADFSDF234234</BuyerCookie>
+            <Extrinsic name="randomKey">department code</Extrinsic>
+            <BrowserFormPost>
+                <URL>http://ariba.cisco.com:1616/punchoutexit</URL>
+            </BrowserFormPost>
+            <SupplierSetup>
+                <URL>http://dell.com/cxml</URL>
+            </SupplierSetup>
+        </PunchOutSetupRequest>
+    </Request>
+</cXML>

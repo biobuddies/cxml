@@ -1,5 +1,17 @@
-# cxml
+# cXML 1.0.001
 
-A versioned mirror of the cXML specification.
+English documentation and schemas from the
+[official cXML downloads](https://www.cxml.org/downloads.html).
 
-[Fetch and format the documents](tools/README.md).
+## Schemas
+
+- [cXML.dtd](cXML.dtd)
+
+## Documentation
+
+- [cXML](documents/cXML.md)
+- [Changelog](CHANGELOG.md)
+- [Packages and XML examples](documents/packages/)
+- [Upstream license](LICENSE.md)
+
+[Source manifest](documents/manifest.toml) · [Fetch and format tools](tools/README.md)

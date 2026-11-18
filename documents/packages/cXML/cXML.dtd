@@ -1,0 +1,39 @@
+<!--
+    Copyright (c) 1996-1999 Ariba, Inc.
+    All rights reserved. Patents pending.
+
+    $Id: //ariba/specs/cXML/cXML.dtd#4 $
+-->
+
+<!-- Imports -->
+<!ENTITY % defineCommonModule SYSTEM "Common.mod">
+%defineCommonModule;
+
+<!ENTITY % defineBaseModule SYSTEM "Base.mod">
+%defineBaseModule;
+
+<!ENTITY % defineSupplierModule SYSTEM "Supplier.mod">
+%defineSupplierModule;
+
+<!ENTITY % defineItemModule SYSTEM "Item.mod">
+%defineItemModule;
+
+<!ENTITY % defineTransactionModule SYSTEM "Transaction.mod">
+%defineTransactionModule;
+
+<!ENTITY % defineTransportModule SYSTEM "Transport.mod">
+%defineTransportModule;
+
+<!ENTITY % defineContractModule SYSTEM "Contract.mod">
+%defineContractModule;
+
+<!ENTITY % defineIndexModule SYSTEM "Index.mod">
+%defineIndexModule;
+
+<!ENTITY % definePendingModule SYSTEM "Pending.mod">
+%definePendingModule;
+
+<!ENTITY % defineSubscriptionModule SYSTEM "Subscription.mod">
+%defineSubscriptionModule;
+
+<!-- Done with Imports all Elements/Entities are now defined -->
