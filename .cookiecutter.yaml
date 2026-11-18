@@ -1,0 +1,7 @@
+default_context:
+    description: A versioned mirror of the cXML specification
+    languages: Node,Python
+    python_dependencies:
+        - markdownify==1.2.3
+        - pymupdf==1.28.2
+        - pymupdf4llm==1.28.2
