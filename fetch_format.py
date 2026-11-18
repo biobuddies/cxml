@@ -1,4 +1,11 @@
-"""Fetch cXML originals and render one release as Markdown and source files."""
+"""Fetch cXML originals and render one release as Markdown and source files.
+
+Originals are cached under untracked/cxml/. Review a rendered snapshot before
+copying it to the repository root. Commit the snapshot separately from tooling.
+
+    mise run cxml -- fetch --refresh --history
+    mise run cxml -- render 1.2.072 untracked/rendered/1.2.072
+"""
 
 import argparse
 import json
@@ -25,7 +32,7 @@ import pymupdf4llm
 from bs4 import BeautifulSoup
 from markdownify import markdownify
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 UPSTREAM = ROOT / 'untracked' / 'cxml'
 INDEX = 'https://www.cxml.org/downloads.html'
 LICENSE = 'https://www.cxml.org/license.html'
@@ -412,37 +419,25 @@ def render(version: str, output: Path) -> None:
     changelog(version, output)
     replace(documents / 'manifest.toml', manifest_bytes(version, records))
     guides = [f'- [{path.stem}](documents/{path.name})' for path in sorted(documents.glob('*.md'))]
-    schemas = [
-        f'- [{path.name}]({path.name})'
-        for path in sorted(output.glob('*.dtd'))
-        if path.name != 'cXML.dtd'
-    ]
     index = '\n'.join((
         f'# cXML {version}',
         '',
         'English documentation and schemas from the',
         '[official cXML downloads](https://www.cxml.org/downloads.html).',
         '',
-        '## Schemas',
-        '',
-        '- [cXML.dtd](cXML.dtd)',
-        *schemas,
-        '',
         '## Documentation',
         '',
         *guides,
-        '- [Changelog](CHANGELOG.md)',
         '- [Packages and XML examples](documents/packages/)',
-        '- [Upstream license](LICENSE.md)',
-        '',
-        '[Source manifest](documents/manifest.toml) · [Fetch and format tools](tools/README.md)',
         '',
     ))
     replace(output / 'README.md', index.encode())
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     commands = parser.add_subparsers(dest='command', required=True)
     fetch_args = commands.add_parser('fetch', help='cache original cXML files')
     fetch_args.add_argument('--history', action='store_true', help='include linked older releases')
