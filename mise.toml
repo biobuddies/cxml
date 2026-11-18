@@ -1,0 +1,3 @@
+[tasks.cxml]
+description = 'Fetch or render cXML documents'
+run = 'uv run --no-sync tools/cxml.py'

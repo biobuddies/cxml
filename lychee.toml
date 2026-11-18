@@ -1,0 +1,3 @@
+# Check cXML.org only through the paced, cached downloader.
+exclude = ['^https?://([^/]+\.)?cxml\.org(/|$)']
+exclude_path = ['(^|[/\\])documents([/\\]|$)', '(^|[/\\])(CHANGELOG|LICENSE)\.md$']

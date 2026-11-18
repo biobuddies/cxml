@@ -1,0 +1,4 @@
+^documents/
+^Modules/
+^[^/]+\.(dtd|mod)$
+^(CHANGELOG|LICENSE)\.md$

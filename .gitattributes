@@ -1,3 +1,6 @@
 *.bash text eol=lf
 *.sh text eol=lf
 /documents/packages/** -text
+/*.dtd -text
+/*.mod -text
+/Modules/** -text
