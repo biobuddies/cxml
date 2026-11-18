@@ -1,11 +1,11 @@
-version = "1.0.001"
-
-[files."cXML.pdf"]
-bytes = 140209
-sha256 = "33d4d706ce5335e1b4d591a842ed72c6d1c9bd0e66b0aa46ad01702e20242857"
-url = "https://xml.cxml.org/schemas/cXML/1.0.001/cXML.pdf"
+version = "1.1.010"
 
 [files."cXML.zip"]
-bytes = 131487
-sha256 = "bc85a677b5e55935706b4460b5eaf76c51ad09950040cb60b6a1b20af02d9d2e"
-url = "https://xml.cxml.org/schemas/cXML/1.0.001/cXML.zip"
+bytes = 1118607
+sha256 = "60f4d37e8596d968735be614c046f6a591bee1367750355955fe409a17a1f53b"
+url = "https://xml.cxml.org/schemas/cXML/1.1.010/cXML.zip"
+
+[files."cXMLUsersGuide.pdf"]
+bytes = 1532951
+sha256 = "3f79e570bda183a1aaf6c68df2a303222ab7ce49fbca8fbaf78fcd11478e5c48"
+url = "https://xml.cxml.org/schemas/cXML/1.1.010/cXMLUsersGuide.pdf"

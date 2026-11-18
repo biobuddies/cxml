@@ -1,4 +1,4 @@
-# cXML 1.0.001
+# cXML 1.1.010
 
 English documentation and schemas from the
 [official cXML downloads](https://www.cxml.org/downloads.html).
@@ -9,7 +9,7 @@ English documentation and schemas from the
 
 ## Documentation
 
-- [cXML](documents/cXML.md)
+- [cXMLUsersGuide](documents/cXMLUsersGuide.md)
 - [Changelog](CHANGELOG.md)
 - [Packages and XML examples](documents/packages/)
 - [Upstream license](LICENSE.md)
