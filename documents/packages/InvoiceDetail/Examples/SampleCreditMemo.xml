@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.072/InvoiceDetail.dtd">
+<cXML version="1.0" payloadID="123344-2001@live.ariba.com"
+      timestamp="2001-04-20T23:59:45-07:00">
+    <Header>
+        <From>
+            <!-- Supplier -->
+            <Credential domain="AribaNetworkUserId">
+                <Identity>dchen@ariba.com</Identity>
+            </Credential>
+        </From>
+        <To>
+            <!-- The buying marketplace -->
+            <Credential domain="AribaNetworkUserId" type="marketplace">
+                <Identity>bigadmin@marketplace.org</Identity>
+            </Credential>
+            <!-- The buying member organization. -->
+            <Credential domain="AribaNetworkUserId">
+                <Identity>admin@acme.com</Identity>
+            </Credential>
+        </To>
+        <Sender>
+            <!-- Supplier -->
+            <Credential domain="AribaNetworkUserId">
+                <Identity>dchen@ariba.com</Identity>
+                <SharedSecret>password</SharedSecret>
+            </Credential>
+            <UserAgent>Ariba Network V1.1</UserAgent>
+        </Sender>
+    </Header>
+    <Request deploymentMode="test">
+        <InvoiceDetailRequest>
+            <InvoiceDetailRequestHeader invoiceID="123456" 
+              purpose="creditMemo" operation="new" 
+              invoiceDate="2001-04-20T23:59:20-07:00">
+                <InvoiceDetailHeaderIndicator isHeaderInvoice="yes"/>
+                <InvoiceDetailLineIndicator/>
+            </InvoiceDetailRequestHeader>
+            <InvoiceDetailHeaderOrder>
+                <InvoiceDetailOrderInfo>
+                    <OrderReference>
+                        <DocumentReference payloadID="25510.10.81.230"/>
+                    </OrderReference>
+                    <MasterAgreementReference>
+                        <DocumentReference payloadID="25510.10.81.001"/>
+                    </MasterAgreementReference>
+                </InvoiceDetailOrderInfo>
+                <InvoiceDetailOrderSummary invoiceLineNumber="1">
+                    <SubtotalAmount>
+                        <Money currency="USD">-50</Money>
+                    </SubtotalAmount>
+                </InvoiceDetailOrderSummary>
+            </InvoiceDetailHeaderOrder>
+            <InvoiceDetailHeaderOrder>
+                <InvoiceDetailOrderInfo>
+                    <OrderReference>
+                        <DocumentReference payloadID="25510.10.81.231"/>
+                    </OrderReference>
+                    <MasterAgreementReference>
+                        <DocumentReference payloadID="25510.10.81.002"/>
+                    </MasterAgreementReference>
+                </InvoiceDetailOrderInfo>
+                <InvoiceDetailOrderSummary invoiceLineNumber="2">
+                    <SubtotalAmount>
+                        <Money currency="USD">-70</Money>
+                    </SubtotalAmount>
+                </InvoiceDetailOrderSummary>
+            </InvoiceDetailHeaderOrder>
+            <InvoiceDetailSummary>
+                <SubtotalAmount>
+                    <Money currency="USD">-120</Money>
+                </SubtotalAmount>
+                <Tax>
+                    <Money currency="USD">0</Money>
+                    <Description xml:lang="en">total tax</Description>
+                </Tax>
+                <NetAmount>
+                    <Money currency="USD">-120</Money>
+                </NetAmount>
+                <DueAmount>
+                    <Money currency="USD">-120</Money>
+                </DueAmount>
+            </InvoiceDetailSummary>
+        </InvoiceDetailRequest>
+    </Request>
+</cXML>
+

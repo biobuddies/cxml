@@ -1,11 +1,41 @@
-version = "1.1.010"
+version = "1.2.072"
 
-[files."cXML.zip"]
-bytes = 1118607
-sha256 = "60f4d37e8596d968735be614c046f6a591bee1367750355955fe409a17a1f53b"
-url = "https://xml.cxml.org/schemas/cXML/1.1.010/cXML.zip"
+[files."Catalog.zip"]
+bytes = 153517
+sha256 = "c2d9eb30bf49c3db50613a4528bfb1aa0d6da1b100a256530ef1c4e5bc6f88a1"
+url = "https://xml.cxml.org/current/Catalog.zip"
 
-[files."cXMLUsersGuide.pdf"]
-bytes = 1532951
-sha256 = "3f79e570bda183a1aaf6c68df2a303222ab7ce49fbca8fbaf78fcd11478e5c48"
-url = "https://xml.cxml.org/schemas/cXML/1.1.010/cXMLUsersGuide.pdf"
+[files."Fulfill.zip"]
+bytes = 687473
+sha256 = "bfb5f3f82bc66dc22841e6926650d35ad64c652cf5c662f9dd05535ecfb60d86"
+url = "https://xml.cxml.org/current/Fulfill.zip"
+
+[files."InvoiceDetail.zip"]
+bytes = 621737
+sha256 = "d8f96c62ddab4eb1695c620c4b228a8f0250ed6f3d2fa4520e93ad794008e34b"
+url = "https://xml.cxml.org/current/InvoiceDetail.zip"
+
+[files."ReleaseNotes.html"]
+bytes = 519815
+sha256 = "fab1a848875169a5de01b6c950d2ff83a283e6123e91d251e9fcb36104acea37"
+url = "https://xml.cxml.org/current/ReleaseNotes.html"
+
+[files."cXMLGettingStarted.pdf"]
+bytes = 531433
+sha256 = "bde2ae15d951da117ba1cec7882ebbf250957af744c6f9fc83fb1021c9774940"
+url = "https://xml.cxml.org/current/cXMLGettingStarted.pdf"
+
+[files."cXMLReferenceGuide.pdf"]
+bytes = 2846023
+sha256 = "61bc24a346a09431165fb50c321369abf6c2b4f1fcbcd7c65893083e60ff4529"
+url = "https://xml.cxml.org/current/cXMLReferenceGuide.pdf"
+
+[files."cXML_DTDs.zip"]
+bytes = 774142
+sha256 = "6aa0c772e506859bad79f5cffc0302f0b2a5a6c9337b8272a252d2f608ce934d"
+url = "https://xml.cxml.org/current/cXML_DTDs.zip"
+
+[files."release-notes.html"]
+bytes = 8171
+sha256 = "66e3ca783e5bba9d13dc7d74e1257881aa7b65a8dff2870fd3f012699da9c026"
+url = "https://www.cxml.org/release-notes.html"

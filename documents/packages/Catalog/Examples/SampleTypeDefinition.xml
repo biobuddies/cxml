@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TypeDefinition SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.072/Catalog.dtd">
+<TypeDefinition>
+<TypeProvider name="Ariba">
+    <OrganizationID>
+      <Credential domain="NETWORK"><Identity>2</Identity></Credential>
+    </OrganizationID>
+</TypeProvider>
+
+<Comments>Example definition for a "Pipe" parametric type</Comments>
+
+<!--
+    Example parametric "Pipe" type
+-->
+<Type name="pipe" extends="Ariba:CatalogItem">
+   <Description xml:lang="en">A standard pipe</Description>
+   <Description xml:lang="de">Ein Standardrohr</Description>
+
+   <Name xml:lang="en">Pipe</Name>
+   <Name xml:lang="de">Rohr</Name>
+   
+   <TypeAttribute name="Type"
+                  type="Name"
+                  isRefinable="yes">
+       <Name xml:lang="en">Type</Name>
+       <Name xml:lang="de">Art</Name>
+   </TypeAttribute>
+              
+   <TypeAttribute name="Size"
+                  type="Name"
+                  isRefinable="yes">
+       <Name xml:lang="en">Type</Name>
+       <Name xml:lang="de">Grosse</Name>
+   </TypeAttribute>
+                 
+   <TypeAttribute name="WeightPerFoot"
+                  type="Number"
+                  isRefinable="yes">
+       <Name xml:lang="en">Weight per Foot</Name>
+       <Name xml:lang="de">Gewicht pro Fuss</Name>
+   </TypeAttribute>
+              
+   <TypeAttribute name="Diametert"
+                  type="Number"
+                  isRefinable="yes">
+       <Name xml:lang="en">Diameter</Name>
+       <Name xml:lang="de">Durchmesser</Name>
+   </TypeAttribute>
+              
+   <TypeAttribute name="Thickness"
+                  type="Number"
+                  isRefinable="yes">
+       <Name xml:lang="en">Thickness</Name>
+       <Name xml:lang="de">Starke</Name>
+   </TypeAttribute>
+              
+   <TypeAttribute name="ThreadType"
+                  type="Name"
+                  isRefinable="yes">
+       <Name xml:lang="en">Thread Type</Name>
+       <Name xml:lang="de">Gewinde-Art</Name>
+   </TypeAttribute>
+              
+   <TypeAttribute name="CouplingType"
+                  type="Name"
+                  isRefinable="yes">
+       <Name xml:lang="en">Coupling Type</Name>
+       <Name xml:lang="de">Koppelung Art</Name>
+   </TypeAttribute>
+</Type>
+</TypeDefinition>

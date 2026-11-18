@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.072/InvoiceDetail.dtd">
+<cXML version="1.0" payloadID="123344-2001@live.ariba.com" timestamp="2001-04-20T23:59:45-07:00">
+    <Header>
+        <From>
+            <!-- Supplier -->
+            <Credential domain="AribaNetworkUserId">
+                <Identity>easyfacilites@ariba.com</Identity>
+            </Credential>
+        </From>
+        <To>
+            <!-- The buying marketplace -->
+            <Credential domain="AribaNetworkUserId" type="marketplace">
+                <Identity>bigadmin@marketplace.org</Identity>
+            </Credential>
+            <!-- The buying member organization. -->
+            <Credential domain="AribaNetworkUserId">
+                <Identity>admin@acme.com</Identity>
+            </Credential>
+        </To>
+        <Sender>
+            <!-- Supplier -->
+            <Credential domain="AribaNetworkUserId">
+                <Identity>easyfacilites@ariba.com</Identity>
+                <SharedSecret>password</SharedSecret>
+            </Credential>
+            <UserAgent>Ariba Network V1.1</UserAgent>
+        </Sender>
+    </Header>
+    <Request deploymentMode="test">
+        <InvoiceDetailRequest>
+            <InvoiceDetailRequestHeader invoiceID="123456" purpose="standard" operation="new" invoiceDate="2001-04-20T23:59:20-07:00">
+                <InvoiceDetailHeaderIndicator/>
+                <InvoiceDetailLineIndicator isTaxInLine="yes" isShippingInLine="yes" isAccountingInLine="yes"/>
+                <InvoicePartner>
+                    <Contact role="soldTo" addressID="B2.4.319">
+                        <Name xml:lang="en">Mike Smith</Name>
+                        <PostalAddress name="default">
+                            <DeliverTo>Mike Smith</DeliverTo>
+                            <Street>15 Camino del Cerro</Street>
+                            <City>Los Gatos</City>
+                            <State>CA</State>
+                            <PostalCode>95032</PostalCode>
+                            <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                        <Email name="default">admin@ariba.com</Email>
+                        <Phone name="work">
+                            <TelephoneNumber>
+                                <CountryCode isoCountryCode="US">1</CountryCode>
+                                <AreaOrCityCode>408</AreaOrCityCode>
+                                <Number>3582000</Number>
+                            </TelephoneNumber>
+                        </Phone>
+                        <Fax name="work">
+                            <TelephoneNumber>
+                                <CountryCode isoCountryCode="US">1</CountryCode>
+                                <AreaOrCityCode>408</AreaOrCityCode>
+                                <Number>3582100</Number>
+                            </TelephoneNumber>
+                        </Fax>
+                    </Contact>
+                </InvoicePartner>
+                <InvoicePartner>
+                    <Contact role="remitTo" addressID="Billing">
+                        <Name xml:lang="en">Lisa King</Name>
+                        <PostalAddress name="billing department">
+                            <DeliverTo>Lisa King</DeliverTo>
+                            <Street>16 Castro Street</Street>
+                            <City>Mountain View</City>
+                            <State>CA</State>
+                            <PostalCode>95035</PostalCode>
+                            <Country isoCountryCode="US">United States</Country>
+                        </PostalAddress>
+                        <Email name="default">lking@supplierbank.com</Email>
+                        <Phone name="work">
+                            <TelephoneNumber>
+                                <CountryCode isoCountryCode="US">1</CountryCode>
+                                <AreaOrCityCode>650</AreaOrCityCode>
+                                <Number>9990000</Number>
+                            </TelephoneNumber>
+                        </Phone>
+                    </Contact>
+                    <IdReference identifier="00000-11111" domain="accountReceivableID">
+                        <Creator xml:lang="en">Supplier ERP</Creator>
+                    </IdReference>
+                    <IdReference identifier="123456789" domain="bankRoutingID">
+                        <Creator xml:lang="en">Supplier Bank</Creator>
+                    </IdReference>
+                </InvoicePartner>
+                <InvoiceDetailPaymentTerm payInNumberOfDays="10" percentageRate="10"/>
+                <InvoiceDetailPaymentTerm payInNumberOfDays="20" percentageRate="5"/>
+                <InvoiceDetailPaymentTerm payInNumberOfDays="30" percentageRate="0"/>
+                <InvoiceDetailPaymentTerm payInNumberOfDays="40" percentageRate="-5"/>
+                <InvoiceDetailPaymentTerm payInNumberOfDays="50" percentageRate="-10"/>
+            </InvoiceDetailRequestHeader>
+            <InvoiceDetailOrder>
+                <InvoiceDetailOrderInfo>
+                    <MasterAgreementIDInfo agreementID="MA-1234"/>
+                </InvoiceDetailOrderInfo>
+                <InvoiceDetailItem invoiceLineNumber="1" quantity="100">
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <UnitPrice>
+                        <Money currency="USD">57.13</Money>
+                    </UnitPrice>
+                    <InvoiceDetailItemReference lineNumber="2">
+                        <ItemID>
+                            <SupplierPartID>TOW08134</SupplierPartID>
+                        </ItemID>
+                        <Description xml:lang="en">
+                            Roll Towel Series 2000
+                        </Description>
+                    </InvoiceDetailItemReference>
+                    <SubtotalAmount>
+                        <Money currency="USD">5713</Money>
+                    </SubtotalAmount>
+                    <Tax>
+                        <Money currency="USD">287</Money>
+                        <Description xml:lang="en">total item tax
+                        </Description>
+                        <TaxDetail purpose="tax" category="State sales tax" percentageRate="8">
+                            <TaxableAmount>
+                                <Money currency="USD">5713</Money>
+                            </TaxableAmount>
+                            <TaxAmount>
+                                <Money currency="USD">200</Money>
+                            </TaxAmount>
+                            <TaxLocation xml:lang="en">CA</TaxLocation>
+                        </TaxDetail>
+                        <TaxDetail purpose="tax" category="Federal sales tax" percentageRate="2">
+                            <TaxableAmount>
+                                <Money currency="USD">5713</Money>
+                            </TaxableAmount>
+                            <TaxAmount>
+                                <Money currency="USD">87</Money>
+                            </TaxAmount>
+                        </TaxDetail>
+                    </Tax>
+                    <GrossAmount>
+                        <Money currency="USD">6000</Money>
+                    </GrossAmount>
+                    <NetAmount>
+                        <Money currency="USD">6000</Money>
+                    </NetAmount>
+                    <Distribution>
+                        <Accounting name="Buyer assigned accounting code 1">
+                            <AccountingSegment id="ABC123456789">
+                                <Name xml:lang="en">Facilities</Name>
+                                <Description xml:lang="en">Facilities</Description>
+                            </AccountingSegment>
+                        </Accounting>
+                        <Charge>
+                            <Money currency="USD">6000</Money>
+                        </Charge>
+                    </Distribution>
+                </InvoiceDetailItem>
+                <InvoiceDetailServiceItem invoiceLineNumber="2" quantity="100">
+                    <InvoiceDetailServiceItemReference lineNumber="1">
+                        <Classification domain="UNSPC">76.11.15.01</Classification>
+                        <Description xml:lang="en">
+                    		        Window cleaning services at $30/hour
+			                    </Description>
+                    </InvoiceDetailServiceItemReference>
+                    <SubtotalAmount>
+                        <Money currency="USD">3000.00</Money>
+                    </SubtotalAmount>
+                    <Period startDate="2001-02-01T12:00:00-00:00" endDate="2001-02-30T12:00:00-00:00"/>
+                    <UnitOfMeasure>HUR</UnitOfMeasure>
+                    <UnitPrice>
+                        <Money currency="USD">30</Money>
+                    </UnitPrice>
+                    <Distribution>
+                        <Accounting name="Buyer assigned accounting code 1">
+                            <AccountingSegment id="ABC123456789">
+                                <Name xml:lang="en">Facilities</Name>
+                                <Description xml:lang="en">Facilities</Description>
+                            </AccountingSegment>
+                        </Accounting>
+                        <Charge>
+                            <Money currency="USD">3000</Money>
+                        </Charge>
+                    </Distribution>
+                    <Extrinsic name="serviceLocation">
+                        <Contact role="serviceLocation">
+                            <Name xml:lang="en">XYZ Inc</Name>
+                            <PostalAddress>
+                                <Street>123 Easy St</Street>
+                                <City>Sunnyvale</City>
+                                <State>California</State>
+                                <PostalCode>94089</PostalCode>
+                                <Country isoCountryCode="US">USA</Country>
+                            </PostalAddress>
+                        </Contact>
+                    </Extrinsic>
+                </InvoiceDetailServiceItem>
+            </InvoiceDetailOrder>
+            <InvoiceDetailOrder>
+                <InvoiceDetailOrderInfo>
+                    <MasterAgreementIDInfo agreementID="MA-1235"/>
+                </InvoiceDetailOrderInfo>
+                <!---  milestone invoicing -->
+                <InvoiceDetailServiceItem invoiceLineNumber="3">
+                    <InvoiceDetailServiceItemReference lineNumber="1">
+                        <Classification domain="UNSPC">78102694</Classification>
+                        <Description xml:lang="en">
+                            Market Research preliminary analysis
+                        </Description>
+                    </InvoiceDetailServiceItemReference>
+                    <SubtotalAmount>
+                        <Money currency="USD">5000</Money>
+                    </SubtotalAmount>
+                </InvoiceDetailServiceItem>
+            </InvoiceDetailOrder>
+            <InvoiceDetailSummary>
+                <SubtotalAmount>
+                    <Money currency="USD">13713</Money>
+                </SubtotalAmount>
+                <Tax>
+                    <Money currency="USD">287</Money>
+                    <Description xml:lang="en">total tax</Description>
+                    <TaxDetail purpose="tax" category="State sales tax" percentageRate="8">
+                        <TaxableAmount>
+                            <Money currency="USD">5713</Money>
+                        </TaxableAmount>
+                        <TaxAmount>
+                            <Money currency="USD">200</Money>
+                        </TaxAmount>
+                        <TaxLocation xml:lang="en">CA</TaxLocation>
+                    </TaxDetail>
+                    <TaxDetail purpose="tax" category="Federal sales tax" percentageRate="2">
+                        <TaxableAmount>
+                            <Money currency="USD">5713</Money>
+                        </TaxableAmount>
+                        <TaxAmount>
+                            <Money currency="USD">87</Money>
+                        </TaxAmount>
+                    </TaxDetail>
+                </Tax>
+                <GrossAmount>
+                    <Money currency="USD">14000.00</Money>
+                </GrossAmount>
+                <NetAmount>
+                    <Money currency="USD">14000.00</Money>
+                </NetAmount>
+                <DueAmount>
+                    <Money currency="USD">14000.00</Money>
+                </DueAmount>
+            </InvoiceDetailSummary>
+        </InvoiceDetailRequest>
+    </Request>
+</cXML>
